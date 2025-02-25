@@ -1,7 +1,7 @@
 function displayRecipe(response) {
     console.log("recipe generated");
     new Typewriter("#recipe", {
-        strings: response.data.answer,
+        strings: [response.data.answer],
         autoStart: true,
         delay: 1,
         cursor: "",
@@ -26,4 +26,4 @@ function generateRecipe(event) {
 }
   
   let recipeFormElement = document.querySelector("#recipe-generator-form");
-  recipeFormElement.addEventListener("submit", generateRecipe);
+  recipeFormElement.addEventListener("submit", generateRecipe); 
