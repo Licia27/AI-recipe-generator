@@ -1,7 +1,7 @@
 function displayRecipe(response) {
     console.log("recipe generated");
     new Typewriter("#recipe", {
-        strings: [response.data.answer],
+        strings: response.data.answer,
         autoStart: true,
         delay: 10,
         cursor: "",
