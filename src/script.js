@@ -26,5 +26,5 @@ function generateRecipe(event) {
 
 }
   
-  let recipeFormElement = document.querySelector("#recipe-generator-form");
+  let recipeFormElement = document.querySelector("#generate-recipe-form");
   recipeFormElement.addEventListener("submit", generateRecipe); 
