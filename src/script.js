@@ -3,7 +3,7 @@ function displayRecipe(response) {
     new Typewriter("#recipe", {
         strings: [response.data.answer],
         autoStart: true,
-        delay: 1,
+        delay: 10,
         cursor: "",
       });
 
@@ -14,7 +14,7 @@ function generateRecipe(event) {
   
     let instructionsInput = document.querySelector("#user-instructions");
     let apiKey = "76f05ea98f32af77ecb47a06208dto32";
-    let context ="you are a fan of good food and you like to generate quick and easy recipes of any meal,please be straight to the point";
+    let context ="you are a fan of good food and you like to generate quick and easy recipes of any meal,please be straight to the point,separate the ingredients and Method in a HTML format. Provide recipe title";
     let prompt = `User instructions: Generate a simple and quick recipe for ${instructionsInput.value}`;
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
     
